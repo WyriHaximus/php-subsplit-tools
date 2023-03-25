@@ -1,0 +1,38 @@
+{
+    "name": "wyrihaximus/subsplit-tools",
+    "description": "Tools to do initial code generation for sub split set up",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cees-Jan Kiewiet",
+            "email": "ceesjank@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "wyrihaximus/simple-twig": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "WyriHaximus\\SubSplitTools\\": "src/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "8.2.13"
+        },
+        "allow-plugins": {
+            "infection/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "ergebnis/composer-normalize": true
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WyriHaximus\\Tests\\SubSplitTools\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "wyrihaximus/test-utilities": "^5.4"
+    }
+}
