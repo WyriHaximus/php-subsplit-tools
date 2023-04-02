@@ -17,14 +17,17 @@ final class Files
             if (!is_file($fileName)) {
                 continue;
             }
-            $newFilename = $destination . DIRECTORY_SEPARATOR . substr($fileName, strlen($templates));
+            $newFilename = render(
+                $destination . DIRECTORY_SEPARATOR . substr($fileName, strlen($templates)),
+                $templateVariables,
+            );
 
             @mkdir(dirname($newFilename), 0744, true);
             file_put_contents(
                 $newFilename,
                 render(
                     file_get_contents($fileName),
-                    $templateVariables
+                    $templateVariables,
                 ),
             );
         }
