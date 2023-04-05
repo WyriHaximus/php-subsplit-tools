@@ -13,7 +13,8 @@
         "wyrihaximus/simple-twig": "^2.1",
         "api-clients/github": "^0.2@dev",
         "cebe/php-openapi": "dev-openapi-31 as 1.6.0",
-        "react/http": "^1.8"
+        "react/http": "^1.8",
+        "thecodingmachine/safe": "^2.4"
     },
     "autoload": {
         "psr-4": {
