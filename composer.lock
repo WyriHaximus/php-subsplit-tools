@@ -5842,93 +5842,6 @@
             "time": "2023-04-09T17:37:40+00:00"
         },
         {
-            "name": "nette/utils",
-            "version": "v4.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nette/utils.git",
-                "reference": "cacdbf5a91a657ede665c541eda28941d4b09c1e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/cacdbf5a91a657ede665c541eda28941d4b09c1e",
-                "reference": "cacdbf5a91a657ede665c541eda28941d4b09c1e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.0 <8.3"
-            },
-            "conflict": {
-                "nette/finder": "<3",
-                "nette/schema": "<1.2.2"
-            },
-            "require-dev": {
-                "jetbrains/phpstorm-attributes": "dev-master",
-                "nette/tester": "^2.4",
-                "phpstan/phpstan": "^1.0",
-                "tracy/tracy": "^2.9"
-            },
-            "suggest": {
-                "ext-gd": "to use Image",
-                "ext-iconv": "to use Strings::webalize(), toAscii(), chr() and reverse()",
-                "ext-intl": "to use Strings::webalize(), toAscii(), normalize() and compare()",
-                "ext-json": "to use Nette\\Utils\\Json",
-                "ext-mbstring": "to use Strings::lower() etc...",
-                "ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()",
-                "ext-xml": "to use Strings::length() etc. when mbstring is not available"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause",
-                "GPL-2.0-only",
-                "GPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "David Grudl",
-                    "homepage": "https://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "https://nette.org/contributors"
-                }
-            ],
-            "description": "🛠  Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
-            "homepage": "https://nette.org",
-            "keywords": [
-                "array",
-                "core",
-                "datetime",
-                "images",
-                "json",
-                "nette",
-                "paginator",
-                "password",
-                "slugify",
-                "string",
-                "unicode",
-                "utf-8",
-                "utility",
-                "validation"
-            ],
-            "support": {
-                "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.0.0"
-            },
-            "time": "2023-02-02T10:41:53+00:00"
-        },
-        {
             "name": "nikic/php-parser",
             "version": "v4.16.0",
             "source": {
@@ -7171,16 +7084,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.22.1",
+            "version": "1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "65c39594fbd8c67abfc68bb323f86447bab79cc0"
+                "reference": "a2b24135c35852b348894320d47b3902a94bc494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/65c39594fbd8c67abfc68bb323f86447bab79cc0",
-                "reference": "65c39594fbd8c67abfc68bb323f86447bab79cc0",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/a2b24135c35852b348894320d47b3902a94bc494",
+                "reference": "a2b24135c35852b348894320d47b3902a94bc494",
                 "shasum": ""
             },
             "require": {
@@ -7212,9 +7125,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.22.1"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.23.0"
             },
-            "time": "2023-06-29T20:46:06+00:00"
+            "time": "2023-07-23T22:17:56+00:00"
         },
         {
             "name": "phpstan/phpstan",
@@ -8215,16 +8128,16 @@
         },
         {
             "name": "revolt/event-loop",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/revoltphp/event-loop.git",
-                "reference": "9ac31d36635c60a9b28bb2a476384c5ec55c95cc"
+                "reference": "b018d0ff141636d69a8054194675fe0050cf3aa9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/revoltphp/event-loop/zipball/9ac31d36635c60a9b28bb2a476384c5ec55c95cc",
-                "reference": "9ac31d36635c60a9b28bb2a476384c5ec55c95cc",
+                "url": "https://api.github.com/repos/revoltphp/event-loop/zipball/b018d0ff141636d69a8054194675fe0050cf3aa9",
+                "reference": "b018d0ff141636d69a8054194675fe0050cf3aa9",
                 "shasum": ""
             },
             "require": {
@@ -8281,9 +8194,9 @@
             ],
             "support": {
                 "issues": "https://github.com/revoltphp/event-loop/issues",
-                "source": "https://github.com/revoltphp/event-loop/tree/v1.0.1"
+                "source": "https://github.com/revoltphp/event-loop/tree/v1.0.2"
             },
-            "time": "2023-04-02T16:25:26+00:00"
+            "time": "2023-07-20T20:16:11+00:00"
         },
         {
             "name": "roave/backward-compatibility-check",
@@ -9781,32 +9694,32 @@
         },
         {
             "name": "slevomat/coding-standard",
-            "version": "8.13.1",
+            "version": "8.13.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slevomat/coding-standard.git",
-                "reference": "a13c15e20f2d307a1ca8dec5313ec462a4466470"
+                "reference": "83fb531a75950b6c6c7c37d7813836c3df8fc8d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/a13c15e20f2d307a1ca8dec5313ec462a4466470",
-                "reference": "a13c15e20f2d307a1ca8dec5313ec462a4466470",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/83fb531a75950b6c6c7c37d7813836c3df8fc8d1",
+                "reference": "83fb531a75950b6c6c7c37d7813836c3df8fc8d1",
                 "shasum": ""
             },
             "require": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2 || ^0.7 || ^1.0",
                 "php": "^7.2 || ^8.0",
-                "phpstan/phpdoc-parser": "^1.22.0",
+                "phpstan/phpdoc-parser": "^1.23.0",
                 "squizlabs/php_codesniffer": "^3.7.1"
             },
             "require-dev": {
                 "phing/phing": "2.17.4",
                 "php-parallel-lint/php-parallel-lint": "1.3.2",
-                "phpstan/phpstan": "1.10.21",
+                "phpstan/phpstan": "1.10.26",
                 "phpstan/phpstan-deprecation-rules": "1.1.3",
                 "phpstan/phpstan-phpunit": "1.3.13",
                 "phpstan/phpstan-strict-rules": "1.5.1",
-                "phpunit/phpunit": "7.5.20|8.5.21|9.6.8|10.2.2"
+                "phpunit/phpunit": "7.5.20|8.5.21|9.6.8|10.2.6"
             },
             "type": "phpcodesniffer-standard",
             "extra": {
@@ -9830,7 +9743,7 @@
             ],
             "support": {
                 "issues": "https://github.com/slevomat/coding-standard/issues",
-                "source": "https://github.com/slevomat/coding-standard/tree/8.13.1"
+                "source": "https://github.com/slevomat/coding-standard/tree/8.13.2"
             },
             "funding": [
                 {
@@ -9842,7 +9755,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-06-25T12:52:34+00:00"
+            "time": "2023-07-24T10:09:44+00:00"
         },
         {
             "name": "spatie/array-to-xml",
@@ -11508,69 +11421,6 @@
             "time": "2021-07-28T10:34:58+00:00"
         },
         {
-            "name": "tomasvotruba/cognitive-complexity",
-            "version": "0.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TomasVotruba/cognitive-complexity.git",
-                "reference": "c5be1ca591c8242437e9a7cf81e2e8b11e0814c7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/cognitive-complexity/zipball/c5be1ca591c8242437e9a7cf81e2e8b11e0814c7",
-                "reference": "c5be1ca591c8242437e9a7cf81e2e8b11e0814c7",
-                "shasum": ""
-            },
-            "require": {
-                "nette/utils": "^3.2|^4.0",
-                "php": "^8.1",
-                "phpstan/phpstan": "^1.9.3"
-            },
-            "require-dev": {
-                "php-parallel-lint/php-parallel-lint": "^1.3",
-                "phpstan/extension-installer": "^1.2",
-                "phpunit/phpunit": "^9.5",
-                "rector/rector": "^0.15.21",
-                "symplify/easy-coding-standard": "^11.2",
-                "tomasvotruba/type-coverage": "^0.0.11",
-                "tomasvotruba/unused-public": "^0.1",
-                "tracy/tracy": "^2.9"
-            },
-            "type": "phpstan-extension",
-            "extra": {
-                "phpstan": {
-                    "includes": [
-                        "config/extension.neon"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TomasVotruba\\CognitiveComplexity\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "PHPStan rules to measure cognitive complexity of your classes and methods",
-            "support": {
-                "issues": "https://github.com/TomasVotruba/cognitive-complexity/issues",
-                "source": "https://github.com/TomasVotruba/cognitive-complexity/tree/0.1.1"
-            },
-            "funding": [
-                {
-                    "url": "https://www.paypal.me/rectorphp",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/tomasvotruba",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-03-12T10:18:06+00:00"
-        },
-        {
             "name": "vimeo/psalm",
             "version": "5.13.1",
             "source": {
@@ -11766,30 +11616,29 @@
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
-            "version": "2.15.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper.git",
-                "reference": "22bc95e85340def409db4246bbd773ff1557f16e"
+                "reference": "16bcf692411eaae54953fe6a946b385e254fd47d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/22bc95e85340def409db4246bbd773ff1557f16e",
-                "reference": "22bc95e85340def409db4246bbd773ff1557f16e",
+                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/16bcf692411eaae54953fe6a946b385e254fd47d",
+                "reference": "16bcf692411eaae54953fe6a946b385e254fd47d",
                 "shasum": ""
             },
             "require": {
                 "ergebnis/phpstan-rules": "^2.0",
                 "jangregor/phpstan-prophecy": "^1.0",
                 "pepakriz/phpstan-exception-rules": "^0.12.0",
-                "php": "^8",
-                "phpstan/phpstan-deprecation-rules": "^1.1",
+                "php": "^8.2",
+                "phpstan/phpstan-deprecation-rules": "^1.1.3",
                 "phpstan/phpstan-php-parser": "^1.1",
-                "phpstan/phpstan-phpunit": "^1.3",
-                "phpstan/phpstan-strict-rules": "^1.5",
+                "phpstan/phpstan-phpunit": "^1.3.13",
+                "phpstan/phpstan-strict-rules": "^1.5.1",
                 "thecodingmachine/phpstan-safe-rule": "^1.2",
-                "thecodingmachine/phpstan-strict-rules": "^1.0",
-                "tomasvotruba/cognitive-complexity": "^0.1.1"
+                "thecodingmachine/phpstan-strict-rules": "^1.0"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -11805,7 +11654,7 @@
             "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/2.15.0"
+                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/3.0.0"
             },
             "funding": [
                 {
@@ -11813,20 +11662,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-19T23:45:33+00:00"
+            "time": "2023-07-22T03:17:18+00:00"
         },
         {
             "name": "wyrihaximus/test-utilities",
-            "version": "5.5.7",
+            "version": "5.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-test-utilities.git",
-                "reference": "f0fb96632e1496de216106c26bb32aafb6c504c3"
+                "reference": "2059b4ca3b7cd5021674f4111b867da9a953099b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-test-utilities/zipball/f0fb96632e1496de216106c26bb32aafb6c504c3",
-                "reference": "f0fb96632e1496de216106c26bb32aafb6c504c3",
+                "url": "https://api.github.com/repos/WyriHaximus/php-test-utilities/zipball/2059b4ca3b7cd5021674f4111b867da9a953099b",
+                "reference": "2059b4ca3b7cd5021674f4111b867da9a953099b",
                 "shasum": ""
             },
             "require": {
@@ -11853,7 +11702,7 @@
                 "thecodingmachine/safe": "^2.5.0",
                 "vimeo/psalm": "^5.13.1",
                 "wyrihaximus/coding-standard": "^2.14.0",
-                "wyrihaximus/phpstan-rules-wrapper": "^2.14.0"
+                "wyrihaximus/phpstan-rules-wrapper": "^2.15.0 || ^3.0.0"
             },
             "conflict": {
                 "symfony/dependency-injection": "<5.0.0"
@@ -11900,7 +11749,7 @@
             "description": "🛠️ Test utilities for api-clients packages",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-test-utilities/issues",
-                "source": "https://github.com/WyriHaximus/php-test-utilities/tree/5.5.7"
+                "source": "https://github.com/WyriHaximus/php-test-utilities/tree/5.5.8"
             },
             "funding": [
                 {
@@ -11908,7 +11757,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-19T18:31:11+00:00"
+            "time": "2023-07-22T03:50:05+00:00"
         }
     ],
     "aliases": [],
