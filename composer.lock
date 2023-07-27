@@ -7393,16 +7393,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.26",
+            "version": "9.2.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "443bc6912c9bd5b409254a40f4b0f4ced7c80ea1"
+                "reference": "b0a88255cb70d52653d80c890bd7f38740ea50d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/443bc6912c9bd5b409254a40f4b0f4ced7c80ea1",
-                "reference": "443bc6912c9bd5b409254a40f4b0f4ced7c80ea1",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/b0a88255cb70d52653d80c890bd7f38740ea50d1",
+                "reference": "b0a88255cb70d52653d80c890bd7f38740ea50d1",
                 "shasum": ""
             },
             "require": {
@@ -7458,7 +7458,8 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.26"
+                "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.27"
             },
             "funding": [
                 {
@@ -7466,7 +7467,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-06T12:58:08+00:00"
+            "time": "2023-07-26T13:44:30+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -9694,16 +9695,16 @@
         },
         {
             "name": "slevomat/coding-standard",
-            "version": "8.13.2",
+            "version": "8.13.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slevomat/coding-standard.git",
-                "reference": "83fb531a75950b6c6c7c37d7813836c3df8fc8d1"
+                "reference": "4b2af2fb17773656d02fbfb5d18024ebd19fe322"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/83fb531a75950b6c6c7c37d7813836c3df8fc8d1",
-                "reference": "83fb531a75950b6c6c7c37d7813836c3df8fc8d1",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/4b2af2fb17773656d02fbfb5d18024ebd19fe322",
+                "reference": "4b2af2fb17773656d02fbfb5d18024ebd19fe322",
                 "shasum": ""
             },
             "require": {
@@ -9743,7 +9744,7 @@
             ],
             "support": {
                 "issues": "https://github.com/slevomat/coding-standard/issues",
-                "source": "https://github.com/slevomat/coding-standard/tree/8.13.2"
+                "source": "https://github.com/slevomat/coding-standard/tree/8.13.4"
             },
             "funding": [
                 {
@@ -9755,7 +9756,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-07-24T10:09:44+00:00"
+            "time": "2023-07-25T10:28:55+00:00"
         },
         {
             "name": "spatie/array-to-xml",
@@ -11666,16 +11667,16 @@
         },
         {
             "name": "wyrihaximus/test-utilities",
-            "version": "5.5.8",
+            "version": "5.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-test-utilities.git",
-                "reference": "2059b4ca3b7cd5021674f4111b867da9a953099b"
+                "reference": "5b6d2484119f72625307b096b8297c933cc765d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-test-utilities/zipball/2059b4ca3b7cd5021674f4111b867da9a953099b",
-                "reference": "2059b4ca3b7cd5021674f4111b867da9a953099b",
+                "url": "https://api.github.com/repos/WyriHaximus/php-test-utilities/zipball/5b6d2484119f72625307b096b8297c933cc765d6",
+                "reference": "5b6d2484119f72625307b096b8297c933cc765d6",
                 "shasum": ""
             },
             "require": {
@@ -11702,7 +11703,7 @@
                 "thecodingmachine/safe": "^2.5.0",
                 "vimeo/psalm": "^5.13.1",
                 "wyrihaximus/coding-standard": "^2.14.0",
-                "wyrihaximus/phpstan-rules-wrapper": "^2.15.0 || ^3.0.0"
+                "wyrihaximus/phpstan-rules-wrapper": "^3.0.0"
             },
             "conflict": {
                 "symfony/dependency-injection": "<5.0.0"
@@ -11749,7 +11750,7 @@
             "description": "🛠️ Test utilities for api-clients packages",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-test-utilities/issues",
-                "source": "https://github.com/WyriHaximus/php-test-utilities/tree/5.5.8"
+                "source": "https://github.com/WyriHaximus/php-test-utilities/tree/5.6.0"
             },
             "funding": [
                 {
@@ -11757,7 +11758,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-22T03:50:05+00:00"
+            "time": "2023-07-26T21:51:43+00:00"
         }
     ],
     "aliases": [],
