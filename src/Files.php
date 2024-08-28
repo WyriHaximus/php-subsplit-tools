@@ -16,6 +16,7 @@ use function rtrim;
 use function Safe\file_get_contents;
 use function Safe\file_put_contents;
 use function Safe\mkdir;
+use function str_replace;
 use function strlen;
 use function substr;
 use function WyriHaximus\Twig\render;
@@ -28,6 +29,28 @@ final class Files
      * @param array<mixed> $templateVariables
      */
     public static function setUp(string $templates, string $destination, array $templateVariables): void
+    {
+        foreach (self::render($templates, $destination, $templateVariables) as $file) {
+            try {
+                /** @phpstan-ignore-next-line */
+                @mkdir(dirname($file->fileName), 0744, true);
+            } catch (FilesystemException) {
+                // void @ignoreException
+            }
+
+            file_put_contents(
+                $file->fileName,
+                $file->contents,
+            );
+        }
+    }
+
+    /**
+     * @param array<mixed> $templateVariables
+     *
+     * @return iterable<File>
+     */
+    public static function render(string $templates, string $destination, array $templateVariables): iterable
     {
         foreach (
             new RecursiveIteratorIterator(
@@ -45,20 +68,17 @@ final class Files
                 continue;
             }
 
-            $newFilename = render(
-                $destination . DIRECTORY_SEPARATOR . substr($fileName, strlen($templates)),
+            $renderedFileName = render(
+                rtrim($destination, '/') . DIRECTORY_SEPARATOR . substr($fileName, strlen($templates)),
                 $templateVariables,
             );
+            do {
+                $previousRenderedFileName = $renderedFileName;
+                $renderedFileName         = str_replace(['//', '\\\\'], DIRECTORY_SEPARATOR, $renderedFileName);
+            } while ($previousRenderedFileName !== $renderedFileName);
 
-            try {
-                /** @phpstan-ignore-next-line */
-                @mkdir(dirname($newFilename), 0744, true);
-            } catch (FilesystemException) {
-                // void @ignoreException
-            }
-
-            file_put_contents(
-                $newFilename,
+            yield new File(
+                $renderedFileName,
                 render(
                     file_get_contents($fileName),
                     $templateVariables,
