@@ -7,15 +7,15 @@ namespace WyriHaximus\SubSplitTools;
 use FilesystemIterator;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
-use Safe\Exceptions\FilesystemException;
+use SplFileInfo;
 
 use function dirname;
+use function file_get_contents;
+use function file_put_contents;
+use function is_dir;
 use function is_file;
-use function is_string;
+use function mkdir;
 use function rtrim;
-use function Safe\file_get_contents;
-use function Safe\file_put_contents;
-use function Safe\mkdir;
 use function str_replace;
 use function strlen;
 use function substr;
@@ -23,19 +23,22 @@ use function WyriHaximus\Twig\render;
 
 use const DIRECTORY_SEPARATOR;
 
+/** @api */
 final class Files
 {
     /**
-     * @param array<mixed> $templateVariables
+     * @var callable(string): (string|false)|null
+     * @phpstan-ignore property.onlyRead, property.unusedType
      */
+    private static $readTemplateFileContentsOverride;
+
+    /** @param array<string, mixed> $templateVariables */
     public static function setUp(string $templates, string $destination, array $templateVariables): void
     {
         foreach (self::render($templates, $destination, $templateVariables) as $file) {
-            try {
-                /** @phpstan-ignore-next-line */
-                @mkdir(dirname($file->fileName), 0744, true);
-            } catch (FilesystemException) {
-                // void @ignoreException
+            $directory = dirname($file->fileName);
+            if (! is_dir($directory)) {
+                mkdir($directory, 0744, true);
             }
 
             file_put_contents(
@@ -46,30 +49,33 @@ final class Files
     }
 
     /**
-     * @param array<mixed> $templateVariables
+     * @param array<string, mixed> $templateVariables
      *
      * @return iterable<File>
      */
     public static function render(string $templates, string $destination, array $templateVariables): iterable
     {
+        $templateRoot = rtrim($templates, '/\\');
+
+        /** @var SplFileInfo $node */
         foreach (
             new RecursiveIteratorIterator(
                 new RecursiveDirectoryIterator(
-                    rtrim($templates, '/'),
-                    FilesystemIterator::SKIP_DOTS | FilesystemIterator::CURRENT_AS_PATHNAME,
+                    $templateRoot,
+                    FilesystemIterator::SKIP_DOTS,
                 ),
-            ) as $fileName
+                RecursiveIteratorIterator::SELF_FIRST,
+            ) as $node
         ) {
-            if (! is_string($fileName)) {
-                continue;
-            }
-
+            $fileName = $node->getPathname();
             if (! is_file($fileName)) {
                 continue;
             }
 
+            $relativePath = substr($fileName, strlen($templateRoot) + 1);
+
             $renderedFileName = render(
-                rtrim($destination, '/') . DIRECTORY_SEPARATOR . substr($fileName, strlen($templates)),
+                rtrim($destination, '/\\') . DIRECTORY_SEPARATOR . $relativePath,
                 $templateVariables,
             );
             do {
@@ -77,13 +83,28 @@ final class Files
                 $renderedFileName         = str_replace(['//', '\\\\'], DIRECTORY_SEPARATOR, $renderedFileName);
             } while ($previousRenderedFileName !== $renderedFileName);
 
+            $fileContents = self::readTemplateFileContents($fileName);
+            if ($fileContents === false) {
+                continue;
+            }
+
             yield new File(
                 $renderedFileName,
                 render(
-                    file_get_contents($fileName),
+                    $fileContents,
                     $templateVariables,
                 ),
             );
         }
+    }
+
+    private static function readTemplateFileContents(string $fileName): string|false
+    {
+        if (self::$readTemplateFileContentsOverride !== null) {
+            return (self::$readTemplateFileContentsOverride)($fileName);
+        }
+
+        /** @phpstan-ignore ergebnis.noErrorSuppression */
+        return @file_get_contents($fileName);
     }
 }
