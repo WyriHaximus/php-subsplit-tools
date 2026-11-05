@@ -7,6 +7,7 @@ ignores:
   - "var/**"
   - "vendor/**"
   - ".git/**"
+  - "templates/**"
 config:
   MD004: false
   MD007: false
